@@ -45,6 +45,10 @@ public class RecipeBookController {
     public Recipe updateRecipe(@Valid @RequestBody Recipe recipe, @PathVariable Long id) throws NoSuchElementException {
         try {
             Recipe currentRecipe = recipeDao.getOne(id);
+            for(Ingredients i : recipe.getIngredients()){
+                i.setRecipe(id);
+                ingredientsDAO.save(i);
+            }
             if (null != recipe.getDateCreated())
                 currentRecipe.setDateCreated(recipe.getDateCreated());
             if (null != recipe.getName())
