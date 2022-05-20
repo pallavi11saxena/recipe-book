@@ -3,6 +3,7 @@ package com.recipebook.data.bean;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * @author pallavi
@@ -17,13 +18,13 @@ public class Recipe {
     private Date dateCreated;
     private Boolean isVeg;
     private Integer serves;
-    private String ingredients;
+    private Set<Ingredients> ingredients;
     private String instructions;
 
     public Recipe() {
     }
 
-    public Recipe(String name, Date dateCreated, Boolean isVeg, Integer serves, String ingredients, String instructions) {
+    public Recipe(String name, Date dateCreated, Boolean isVeg, Integer serves, Set<Ingredients> ingredients, String instructions) {
 
         this.name = name;
         this.dateCreated = dateCreated;
@@ -112,15 +113,16 @@ public class Recipe {
     /**
      * @return the ingredients
      */
-    @Column(name = "INGREDIENTS", nullable = false)
-    public String getIngredients() {
+    @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    public Set<Ingredients> getIngredients() {
         return ingredients;
     }
 
     /**
      * @param ingredients the ingredients to set
      */
-    public void setIngredients(String ingredients) {
+    public void setIngredients(Set<Ingredients> ingredients) {
         this.ingredients = ingredients;
     }
 

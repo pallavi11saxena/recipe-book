@@ -1,6 +1,8 @@
 package com.recipebook.controller;
 
+import com.recipebook.data.bean.Ingredients;
 import com.recipebook.data.bean.Recipe;
+import com.recipebook.data.dao.IngredientsDAO;
 import com.recipebook.data.dao.RecipeDAO;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,9 +19,11 @@ import java.util.NoSuchElementException;
 public class RecipeBookController {
 
     private final RecipeDAO recipeDao;
+    private final IngredientsDAO ingredientsDAO;
 
-    RecipeBookController(RecipeDAO recipeDao) {
+    RecipeBookController(RecipeDAO recipeDao, IngredientsDAO ingredientsDAO) {
         this.recipeDao = recipeDao;
+        this.ingredientsDAO = ingredientsDAO;
     }
 
     @GetMapping(path = "/", produces = "application/json")
@@ -29,7 +33,12 @@ public class RecipeBookController {
 
     @PostMapping("/add")
     public Recipe createRecipe(@Valid @RequestBody Recipe recipe) {
-        return recipeDao.save(recipe);
+        Recipe recipeObj = recipeDao.save(recipe);
+        for(Ingredients i : recipe.getIngredients()){
+            i.setRecipe(recipeObj.getId());
+            ingredientsDAO.save(i);
+        }
+        return recipeObj;
     }
 
     @PutMapping("/update/{id}")
