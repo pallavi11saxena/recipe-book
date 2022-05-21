@@ -1,0 +1,17 @@
+<testsuite failures="0" name="com/recipebook/testsuit/removeRecipeIngredients.feature" skipped="0" tests="1" time="0.023087">
+  <testcase classname="com.recipebook.testsuit.removeRecipeIngredients" name="Remove recipe's ingredients." time="0.023087">
+    <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def dataFile = 'recipe-file.json' ....................................... passed
+* def payload = ........................................................... passed
+Given path '/recipes/update/0' ............................................ passed
+And request payload ....................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+* def output = response ................................................... passed
+And print 'response :',output ............................................. passed
+Then assert responseTime &lt; '100000' ....................................... passed
+Then match response.id =='#notnull' ....................................... passed
+Then match response.name ==  '#(recipeName2)' ............................. passed</system-out>
+  </testcase>
+</testsuite>

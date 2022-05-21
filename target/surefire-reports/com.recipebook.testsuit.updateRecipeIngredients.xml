@@ -1,0 +1,23 @@
+<testsuite failures="1" name="com/recipebook/testsuit/updateRecipeIngredients.feature" skipped="0" tests="1" time="0.039347">
+  <testcase classname="com.recipebook.testsuit.updateRecipeIngredients" name="Remove recipe's ingredients." time="0.039347">
+    <failure message="updateRecipeIngredients.feature:40 - path: $.name, actual: 'veg pasta', expected: 'Chicken Curry', reason: not equal">* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def dataFile = 'recipe-file.json' ....................................... passed
+* def add = call read('classpath:com/recipebook/testsuit/addRecipe.feature')  {"name": "veg pasta","dateCreated": "2022-05-19","isVeg" :  true,"serves":  4,"ingredients": [{"name": "pasta",}, {"name":  "tomato"}, {"name":  "garlic"}],"instructions" : "boil pasta, cut tomato"} . passed
+* def value = add.response ................................................ passed
+* def payload = ........................................................... passed
+Given path '/recipes/update/'+value.id+'' ................................. passed
+And request payload ....................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+* def output = response ................................................... passed
+And print 'response :',output ............................................. passed
+Then assert responseTime &lt; '100000' ....................................... passed
+Then match response.id =='#notnull' ....................................... passed
+Then match response.name ==  '#(recipeName2)' ............................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: updateRecipeIngredients.feature:40 - path: $.name, actual: 'veg pasta', expected: 'Chicken Curry', reason: not equal
+	at ✽.Then match response.name ==  '#(recipeName2)' (updateRecipeIngredients.feature:40)</failure>
+  </testcase>
+</testsuite>

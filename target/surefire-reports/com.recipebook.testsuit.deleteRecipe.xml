@@ -1,0 +1,17 @@
+<testsuite failures="1" name="com/recipebook/testsuit/deleteRecipe.feature" skipped="0" tests="1" time="0.022511">
+  <testcase classname="com.recipebook.testsuit.deleteRecipe" name="Delete recipe." time="0.022511">
+    <failure message="deleteRecipe.feature:13 - status code was: 500, expected: 200, response time: 15, url: http://localhost:8080/recipes/delete/0, response: {&quot;path&quot;:&quot;/recipes/delete/0&quot;,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;message&quot;:&quot;No class com.recipebook.data.bean.Recipe entity with id 0 exists!&quot;,&quot;timestamp&quot;:&quot;2022-05-20T22:23:04.550+0000&quot;,&quot;status&quot;:500}">* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def dataFile = 'recipe-file.json' ....................................... passed
+Given path '/recipes/delete/0' ............................................ passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: deleteRecipe.feature:13 - status code was: 500, expected: 200, response time: 15, url: http://localhost:8080/recipes/delete/0, response: {"path":"/recipes/delete/0","error":"Internal Server Error","message":"No class com.recipebook.data.bean.Recipe entity with id 0 exists!","timestamp":"2022-05-20T22:23:04.550+0000","status":500}
+	at ✽.Then status 200 (deleteRecipe.feature:13)
+
+* def output = response ................................................... skipped
+Then assert responseTime &lt; '100000' ....................................... skipped</failure>
+  </testcase>
+</testsuite>

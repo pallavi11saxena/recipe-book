@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>src.test.java.com.recipebook.testsuit.getRecipeException</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">0</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">1</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2022-05-21 11:17:49 PM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item failed">
+                        <a href="#[1:8]">[1:8] Get the list of all the recipes and validate the response and response time. </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/recipebook/testsuit/getRecipeException.feature</span><span class="feature-description">As a user of the recipe-book app, I want get the list of all the recipes.</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1:8]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">Get the list of all the recipes and validate the response and response time. </span>
+                        </div>
+                        <div class="scenario-time failed">ms: 380</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[1:8]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[1:8]bg">
+                        <div class="step-container" id="1">
+                            <div class="step-ref bg-step">1</div>
+                            <div class="step-cell passed">* url urlParam = 'http://localhost:8080'</div>
+                        </div>
+                        <div class="time-cell passed">11</div>
+                    </div>
+                    <div class="preformatted" data-parent="1">23:17:48.723 not a js function or feature file: [type: NULL, value: null]</div>
+                    <div class="step-row" data-parent="[1:8]bg">
+                        <div class="step-container" id="2">
+                            <div class="step-ref bg-step">2</div>
+                            <div class="step-cell passed">And print 'urlParam :',urlParam</div>
+                        </div>
+                        <div class="time-cell passed">9</div>
+                    </div>
+                    <div class="preformatted" data-parent="2">23:17:48.761 [print] urlParam : http://localhost:8080</div>
+                    <div class="step-row">
+                        <div class="step-container" id="3">
+                            <div class="step-ref passed">3</div>
+                            <div class="step-cell passed">Given path '/recipes'</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="4">
+                            <div class="step-ref passed">4</div>
+                            <div class="step-cell passed">And header Accept = 'application/json'</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">352</div>
+                    </div>
+                    <div class="preformatted" data-parent="5">23:17:49.014 request:
+1 &gt; GET http://localhost:8080/recipes
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/11.0.10)
+
+23:17:49.093 response time in milliseconds: 75,03
+1 &lt; 404
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Sat, 21 May 2022 21:17:49 GMT
+1 &lt; Transfer-Encoding: chunked
+{"timestamp":"2022-05-21T21:17:49.076+0000","status":404,"error":"Not Found","message":"No message available","path":"/recipes"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref failed">6</div>
+                            <div class="step-cell failed">Then status 200</div>
+                        </div>
+                        <div class="time-cell failed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="6">23:17:49.122 status code was: 404, expected: 200, response time: 75, url: http://localhost:8080/recipes, response: {"path":"/recipes","error":"Not Found","message":"No message available","timestamp":"2022-05-21T21:17:49.076+0000","status":404}
+getRecipeException.feature:13 - status code was: 404, expected: 200, response time: 75, url: http://localhost:8080/recipes, response: {"path":"/recipes","error":"Not Found","message":"No message available","timestamp":"2022-05-21T21:17:49.076+0000","status":404}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref skipped">7</div>
+                            <div class="step-cell skipped">* def output = response</div>
+                        </div>
+                        <div class="time-cell skipped">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="8">
+                            <div class="step-ref skipped">8</div>
+                            <div class="step-cell skipped">And print 'response :',output</div>
+                        </div>
+                        <div class="time-cell skipped">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="9">
+                            <div class="step-ref skipped">9</div>
+                            <div class="step-cell skipped">Then assert responseTime &lt; '100000'</div>
+                        </div>
+                        <div class="time-cell skipped">0</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>

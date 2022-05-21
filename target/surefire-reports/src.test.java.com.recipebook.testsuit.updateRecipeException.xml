@@ -1,0 +1,16 @@
+<testsuite failures="0" name="src/test/java/com/recipebook/testsuit/updateRecipeException.feature" skipped="0" tests="1" time="0.345806">
+  <testcase classname="src.test.java.com.recipebook.testsuit.updateRecipeException" name="Add recipe's ingredients." time="0.345806">
+    <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def dataFile = 'recipe-file.json' ....................................... passed
+* def payload = ........................................................... passed
+Given path '/recipes/update/tr' ........................................... passed
+And request payload ....................................................... passed
+When method put ........................................................... passed
+Then status 400 ........................................................... passed
+* def output = response ................................................... passed
+And print 'response :',output ............................................. passed
+Then assert responseTime &lt; '100000' ....................................... passed
+Then match response.error =='Bad Request' ................................. passed</system-out>
+  </testcase>
+</testsuite>

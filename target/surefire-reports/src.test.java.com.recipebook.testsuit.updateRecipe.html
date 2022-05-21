@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>src.test.java.com.recipebook.testsuit.updateRecipe</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">1</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">0</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2022-05-20 11:55:30 PM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item passed">
+                        <a href="#[1.1:15]">[1.1:15] Update recipe's name. </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/recipebook/testsuit/updateRecipe.feature</span><span class="feature-description">As a user of the recipe-book app, I want to update recipe.</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1.1:15]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario Outline: [1.1:15]</span><span class="scenario-name">Update recipe's name. </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 477</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[1.1:15]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[1.1:15]bg">
+                        <div class="step-container" id="1">
+                            <div class="step-ref bg-step">1</div>
+                            <div class="step-cell passed">* url urlParam = 'http://localhost:8080'</div>
+                        </div>
+                        <div class="time-cell passed">13</div>
+                    </div>
+                    <div class="preformatted" data-parent="1">23:55:29.821 not a js function or feature file: [type: NULL, value: null]</div>
+                    <div class="step-row" data-parent="[1.1:15]bg">
+                        <div class="step-container" id="2">
+                            <div class="step-ref bg-step">2</div>
+                            <div class="step-cell passed">And print 'urlParam :',urlParam</div>
+                        </div>
+                        <div class="time-cell passed">8</div>
+                    </div>
+                    <div class="preformatted" data-parent="2">23:55:29.863 [print] urlParam : http://localhost:8080</div>
+                    <div class="step-row" data-parent="[1.1:15]bg">
+                        <div class="step-container" id="3">
+                            <div class="step-ref bg-step">3</div>
+                            <div class="step-cell passed">* def dataFile = 'recipe-file.json'</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="step-row" data-parent="[1.1:15]bg">
+                        <div class="step-container" id="4">
+                            <div class="step-ref bg-step">4</div>
+                            <div class="step-cell passed">* def payload =</div>
+                        </div>
+                        <div class="time-cell passed">74</div>
+                    </div>
+                    <div class="preformatted" data-parent="4">{
+     "name": "Chicken Curry"
+ }</div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-cell passed">Given path '/recipes/update/0'</div>
+                        </div>
+                        <div class="time-cell passed">8</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
+                            <div class="step-cell passed">And request payload</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref passed">7</div>
+                            <div class="step-cell passed">When method put</div>
+                        </div>
+                        <div class="time-cell passed">445</div>
+                    </div>
+                    <div class="preformatted" data-parent="7">23:55:30.503 request:
+1 &gt; PUT http://localhost:8080/recipes/update/0
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 24
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/11.0.10)
+{"name":"Chicken Curry"}
+
+23:55:30.565 response time in milliseconds: 57,48
+1 &lt; 200
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Fri, 20 May 2022 21:55:30 GMT
+1 &lt; Transfer-Encoding: chunked
+{"id":0,"name":"Chicken Curry","dateCreated":"2022-05-20T19:26:00.206+0000","isVeg":false,"serves":2,"ingredients":[{"recipe":0,"id":4,"name":"onion"},{"recipe":0,"id":0,"name":"chicken"},{"recipe":0,"id":1,"name":"yogurt"}],"instructions":"marinate chicken and fry with onion"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="8">
+                            <div class="step-ref passed">8</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="9">
+                            <div class="step-ref passed">9</div>
+                            <div class="step-cell passed">* def output = response</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="10">
+                            <div class="step-ref passed">10</div>
+                            <div class="step-cell passed">And print 'response :',output</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="preformatted" data-parent="10">23:55:30.570 [print] response : {
+  "instructions": "marinate chicken and fry with onion",
+  "dateCreated": "2022-05-20T19:26:00.206+0000",
+  "isVeg": false,
+  "serves": 2,
+  "name": "Chicken Curry",
+  "ingredients": [
+    {
+      "recipe": 0,
+      "name": "onion",
+      "id": 4
+    },
+    {
+      "recipe": 0,
+      "name": "chicken",
+      "id": 0
+    },
+    {
+      "recipe": 0,
+      "name": "yogurt",
+      "id": 1
+    }
+  ],
+  "id": 0
+}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="11">
+                            <div class="step-ref passed">11</div>
+                            <div class="step-cell passed">Then assert responseTime &lt; '100000'</div>
+                        </div>
+                        <div class="time-cell passed">7</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="12">
+                            <div class="step-ref passed">12</div>
+                            <div class="step-cell passed">Then match response.id =='#notnull'</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="13">
+                            <div class="step-ref passed">13</div>
+                            <div class="step-cell passed">Then match response.name ==  '#(recipeName2)'</div>
+                        </div>
+                        <div class="time-cell passed">9</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>

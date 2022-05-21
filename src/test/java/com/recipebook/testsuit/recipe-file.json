@@ -1,0 +1,22 @@
+[
+  {
+    "recipeName1": "veg pasta",
+    "dateCreated1": "2022-05-19",
+    "isVeg1" : true,
+    "serves1": 4,
+    "instructions1" : "boil pasta, cut tomato",
+
+    "recipeName2": "Chicken Curry",
+    "dateCreated2": "2022-05-20",
+    "isVeg2" : false,
+    "serves2": 2,
+    "instructions2" : "marinate chicken and fry with onion",
+
+    "ingredientsName1": "pasta",
+    "ingredientsName2": "tomato",
+    "ingredientsName3": "garlic",
+    "ingredientsName4": "chicken",
+    "ingredientsName5": "onion",
+    "ingredientsName6": "yogurt"
+  }
+]

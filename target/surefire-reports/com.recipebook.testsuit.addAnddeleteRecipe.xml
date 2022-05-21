@@ -1,0 +1,14 @@
+<testsuite failures="0" name="com/recipebook/testsuit/addAnddeleteRecipe.feature" skipped="0" tests="1" time="0.057383">
+  <testcase classname="com.recipebook.testsuit.addAnddeleteRecipe" name="Add and then delete the newly added recipe." time="0.057383">
+    <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def dataFile = 'recipe-file.json' ....................................... passed
+* def add = call read('classpath:com/recipebook/testsuit/addRecipe.feature')  {"name": "veg pasta","dateCreated": "2022-05-19","isVeg" :  true,"serves":  4,"ingredients": [{"name": "pasta",}, {"name":  "tomato"}, {"name":  "garlic"}],"instructions" : "boil pasta, cut tomato"} . passed
+* def value = add.response ................................................ passed
+Given path '/recipes/delete/'+value.id+'' ................................. passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+* def output = response ................................................... passed
+Then assert responseTime &lt; '100000' ....................................... passed</system-out>
+  </testcase>
+</testsuite>

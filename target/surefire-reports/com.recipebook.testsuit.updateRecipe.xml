@@ -1,0 +1,22 @@
+<testsuite failures="1" name="com/recipebook/testsuit/updateRecipe.feature" skipped="0" tests="1" time="0.019625">
+  <testcase classname="com.recipebook.testsuit.updateRecipe" name="Update recipe's name." time="0.019625">
+    <failure message="updateRecipe.feature:43 - status code was: 500, expected: 200, response time: 12, url: http://localhost:8080/recipes/update/0, response: {&quot;path&quot;:&quot;/recipes/update/0&quot;,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;message&quot;:&quot;Unable to find com.recipebook.data.bean.Recipe with id 0&quot;,&quot;timestamp&quot;:&quot;2022-05-20T22:23:04.792+0000&quot;,&quot;status&quot;:500}">* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def dataFile = 'recipe-file.json' ....................................... passed
+* def payload = ........................................................... passed
+Given path '/recipes/update/0' ............................................ passed
+And request payload ....................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: updateRecipe.feature:43 - status code was: 500, expected: 200, response time: 12, url: http://localhost:8080/recipes/update/0, response: {"path":"/recipes/update/0","error":"Internal Server Error","message":"Unable to find com.recipebook.data.bean.Recipe with id 0","timestamp":"2022-05-20T22:23:04.792+0000","status":500}
+	at ✽.Then status 200 (updateRecipe.feature:43)
+
+* def output = response ................................................... skipped
+And print 'response :',output ............................................. skipped
+Then assert responseTime &lt; '100000' ....................................... skipped
+Then match response.id =='#notnull' ....................................... skipped
+Then match response.name ==  '#(recipeName2)' ............................. skipped</failure>
+  </testcase>
+</testsuite>

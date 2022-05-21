@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-3"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"addAndGetRecipe[1:14]","start":1128,"end":1817,"title":"addAndGetRecipe[1:14] 01:00:01.128-01:00:01.817 Add a new recipe and validate that the old response size is less than the new response size after new recipe addition."},{"id":2,"group":1,"content":"addAndUpdateRecipeName[1.1:17]","start":2020,"end":2053,"title":"addAndUpdateRecipeName[1.1:17] 01:00:02.020-01:00:02.053 Add a new recipe and then update newly added recipe's name."},{"id":3,"group":1,"content":"deleteRecipeException[1:9]","start":2067,"end":2091,"title":"deleteRecipeException[1:9] 01:00:02.067-01:00:02.091 Delete recipe negative scenario, get 500 internal server error when a non-existent Id is passed."},{"id":4,"group":1,"content":"updateRecipeException[1.1:26]","start":2110,"end":2131,"title":"updateRecipeException[1.1:26] 01:00:02.110-01:00:02.131 Update Recipe negative scenario, get 400 Bad request error when wrong parameter is passed in Id field."},{"id":5,"group":1,"content":"addRecipe[1.1:26]","start":2148,"end":2170,"title":"addRecipe[1.1:26] 01:00:02.148-01:00:02.170 Add recipe and validate the response."},{"id":6,"group":1,"content":"addRecipeException[1.1:25]","start":2200,"end":2218,"title":"addRecipeException[1.1:25] 01:00:02.200-01:00:02.218 Add recipe negative scenario, get 500 internal server error when name is not passed in the request payload."},{"id":7,"group":1,"content":"getRecipeException[1:8]","start":2228,"end":2247,"title":"getRecipeException[1:8] 01:00:02.228-01:00:02.247 Get Recipe negative scenario, get 404 Not found error when slash is missing from the endpoint."},{"id":8,"group":1,"content":"addAnddeleteRecipe[1:9]","start":2260,"end":2318,"title":"addAnddeleteRecipe[1:9] 01:00:02.260-01:00:02.318 Add and then delete the newly added recipe."},{"id":9,"group":1,"content":"addAndUpdateRecipeIngredients[1.1:23]","start":2426,"end":2468,"title":"addAndUpdateRecipeIngredients[1.1:23] 01:00:02.426-01:00:02.468 Add a new recipe and then update it's ingredients."},{"id":10,"group":1,"content":"getRecipe[1:8]","start":2480,"end":2523,"title":"getRecipe[1:8] 01:00:02.480-01:00:02.523 Get the list of all the recipes and validate the response and response time."}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

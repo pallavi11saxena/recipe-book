@@ -1,0 +1,18 @@
+<testsuite failures="1" name="src/test/java/com/recipebook/testsuit/getRecipeException.feature" skipped="0" tests="1" time="0.379969">
+  <testcase classname="src.test.java.com.recipebook.testsuit.getRecipeException" name="Get the list of all the recipes and validate the response and response time." time="0.379969">
+    <failure message="getRecipeException.feature:13 - status code was: 404, expected: 200, response time: 75, url: http://localhost:8080/recipes, response: {&quot;path&quot;:&quot;/recipes&quot;,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;No message available&quot;,&quot;timestamp&quot;:&quot;2022-05-21T21:17:49.076+0000&quot;,&quot;status&quot;:404}">* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+Given path '/recipes' ..................................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRecipeException.feature:13 - status code was: 404, expected: 200, response time: 75, url: http://localhost:8080/recipes, response: {"path":"/recipes","error":"Not Found","message":"No message available","timestamp":"2022-05-21T21:17:49.076+0000","status":404}
+	at ✽.Then status 200 (getRecipeException.feature:13)
+
+* def output = response ................................................... skipped
+And print 'response :',output ............................................. skipped
+Then assert responseTime &lt; '100000' ....................................... skipped</failure>
+  </testcase>
+</testsuite>

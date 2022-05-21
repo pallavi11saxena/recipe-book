@@ -1,0 +1,13 @@
+<testsuite failures="0" name="com/recipebook/testsuit/getRecipeException.feature" skipped="0" tests="1" time="0.017861">
+  <testcase classname="com.recipebook.testsuit.getRecipeException" name="Get Recipe negative scenario, get 404 Not found error when slash is missing from the endpoint." time="0.017861">
+    <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+Given path '/recipes' ..................................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+* def output = response ................................................... passed
+And print 'response :',output ............................................. passed
+Then assert responseTime &lt; '100000' ....................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,18 @@
+<testsuite failures="0" name="com/recipebook/testsuit/addAndGetRecipe.feature" skipped="0" tests="1" time="0.673322">
+  <testcase classname="com.recipebook.testsuit.addAndGetRecipe" name="Add a new recipe and validate that the old response size is less than the new response size after new recipe addition." time="0.673322">
+    <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def get = call read('classpath:com/recipebook/testsuit/getRecipe.feature') . passed
+* def oldSize = get.size .................................................. passed
+* def add = call read('classpath:com/recipebook/testsuit/addRecipe.feature')  {"name": "veg pasta","dateCreated": "2022-05-19","isVeg" :  true,"serves":  4,"ingredients": [{"name": "pasta",}, {"name":  "tomato"}, {"name":  "garlic"}],"instructions" : "boil pasta, cut tomato"} . passed
+* def value = add.response ................................................ passed
+Given path '/recipes/' .................................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def output = response ................................................... passed
+And print 'response :',output ............................................. passed
+Then assert responseTime &lt; '100000' ....................................... passed
+Then assert responseBytes.length &gt; oldSize ................................ passed</system-out>
+  </testcase>
+</testsuite>

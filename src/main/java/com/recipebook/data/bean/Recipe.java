@@ -53,7 +53,7 @@ public class Recipe {
     /**
      * @return the name
      */
-    @Column(name = "NAME", nullable = false)
+    @Column(name = "NAME", nullable = false, unique = true)
     public String getName() {
         return name;
     }

@@ -1,0 +1,22 @@
+<testsuite failures="1" name="com/recipebook/testsuit/addRecipeIngredients.feature" skipped="0" tests="1" time="0.034086">
+  <testcase classname="com.recipebook.testsuit.addRecipeIngredients" name="Add recipe's ingredients." time="0.034086">
+    <failure message="addRecipeIngredients.feature:36 - status code was: 500, expected: 200, response time: 27, url: http://localhost:8080/recipes/update/0, response: {&quot;path&quot;:&quot;/recipes/update/0&quot;,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;message&quot;:&quot;Multiple representations of the same entity [com.recipebook.data.bean.Ingredients#1] are being merged. Detached: [com.recipebook.data.bean.Ingredients@2b748eaa]; Detached: [com.recipebook.data.bean.Ingredients@2f4b0f9b]; nested exception is java.lang.IllegalStateException: Multiple representations of the same entity [com.recipebook.data.bean.Ingredients#1] are being merged. Detached: [com.recipebook.data.bean.Ingredients@2b748eaa]; Detached: [com.recipebook.data.bean.Ingredients@2f4b0f9b]&quot;,&quot;timestamp&quot;:&quot;2022-05-20T22:05:23.839+0000&quot;,&quot;status&quot;:500}">* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def dataFile = 'recipe-file.json' ....................................... passed
+* def payload = ........................................................... passed
+Given path '/recipes/update/0' ............................................ passed
+And request payload ....................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: addRecipeIngredients.feature:36 - status code was: 500, expected: 200, response time: 27, url: http://localhost:8080/recipes/update/0, response: {"path":"/recipes/update/0","error":"Internal Server Error","message":"Multiple representations of the same entity [com.recipebook.data.bean.Ingredients#1] are being merged. Detached: [com.recipebook.data.bean.Ingredients@2b748eaa]; Detached: [com.recipebook.data.bean.Ingredients@2f4b0f9b]; nested exception is java.lang.IllegalStateException: Multiple representations of the same entity [com.recipebook.data.bean.Ingredients#1] are being merged. Detached: [com.recipebook.data.bean.Ingredients@2b748eaa]; Detached: [com.recipebook.data.bean.Ingredients@2f4b0f9b]","timestamp":"2022-05-20T22:05:23.839+0000","status":500}
+	at ✽.Then status 200 (addRecipeIngredients.feature:36)
+
+* def output = response ................................................... skipped
+And print 'response :',output ............................................. skipped
+Then assert responseTime &lt; '100000' ....................................... skipped
+Then match response.id =='#notnull' ....................................... skipped
+Then match response.name ==  '#(recipeName2)' ............................. skipped</failure>
+  </testcase>
+</testsuite>

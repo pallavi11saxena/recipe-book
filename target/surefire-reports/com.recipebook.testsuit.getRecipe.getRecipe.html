@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>com.recipebook.testsuit.getRecipe.getRecipe</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">1</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">0</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2022-05-20 11:23:34 PM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item passed">
+                        <a href="#[1:8]">[1:8] Get the list of all the recipes and validate the response and response time. </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">com/recipebook/testsuit/getRecipe/getRecipe.feature</span><span class="feature-description">As a user of the recipe-book app, I want get the list of all the recipes.</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1:8]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">Get the list of all the recipes and validate the response and response time. </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 35</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[1:8]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[1:8]bg">
+                        <div class="step-container" id="1">
+                            <div class="step-ref bg-step">1</div>
+                            <div class="step-cell passed">* url urlParam = 'http://localhost:8080'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="1">23:23:34.386 not a js function or feature file: [type: NULL, value: null]</div>
+                    <div class="step-row" data-parent="[1:8]bg">
+                        <div class="step-container" id="2">
+                            <div class="step-ref bg-step">2</div>
+                            <div class="step-cell passed">And print 'urlParam :',urlParam</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="2">23:23:34.387 [print] urlParam : http://localhost:8080</div>
+                    <div class="step-row">
+                        <div class="step-container" id="3">
+                            <div class="step-ref passed">3</div>
+                            <div class="step-cell passed">Given path '/recipes/'</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="4">
+                            <div class="step-ref passed">4</div>
+                            <div class="step-cell passed">And header Accept = 'application/json'</div>
+                        </div>
+                        <div class="time-cell passed">2</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">24</div>
+                    </div>
+                    <div class="preformatted" data-parent="5">23:23:34.393 request:
+1 &gt; GET http://localhost:8080/recipes/
+1 &gt; Accept: application/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/11.0.10)
+
+23:23:34.415 response time in milliseconds: 21,07
+1 &lt; 200
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Fri, 20 May 2022 21:23:34 GMT
+1 &lt; Transfer-Encoding: chunked
+[{"id":0,"name":"Chicken Curry","dateCreated":"2022-05-20T19:26:00.206+0000","isVeg":false,"serves":2,"ingredients":[{"recipe":0,"id":4,"name":"onion"},{"recipe":0,"id":0,"name":"chicken"},{"recipe":0,"id":1,"name":"yogurt"}],"instructions":"marinate chicken and fry with onion"},{"id":1,"name":"Chicken Curry","dateCreated":"2022-05-20T19:30:31.743+0000","isVeg":false,"serves":2,"ingredients":[],"instructions":"marinate chicken and fry with "},{"id":2,"name":"Chicken Curry","dateCreated":"2022-05-20T20:24:53.611+0000","isVeg":false,"serves":2,"ingredients":[],"instructions":"marinate chicken and fry with "},{"id":3,"name":"Chicken Curry","dateCreated":"2022-05-20T20:26:04.955+0000","isVeg":false,"serves":2,"ingredients":[],"instructions":"marinate chicken and fry with "},{"id":17,"name":"chicke2n","dateCreated":"2022-05-19T00:00:00.000+0000","isVeg":false,"serves":3,"ingredients":[],"instructions":"make"},{"id":37,"name":"pasta","dateCreated":"2022-05-19T00:00:00.000+0000","isVeg":false,"serves":3,"ingredients":[{"recipe":37,"id":40,"name":"pasta"},{"recipe":37,"id":41,"name":"garlic"},{"recipe":37,"id":38,"name":"tomato"},{"recipe":37,"id":39,"name":"chicken"}],"instructions":"boil pasta, cut tomato"},{"id":38,"name":"DalBati","dateCreated":"2022-05-20T20:48:08.980+0000","isVeg":true,"serves":2,"ingredients":[],"instructions":"make"},{"id":39,"name":"DalBati","dateCreated":"2022-05-20T20:55:00.794+0000","isVeg":true,"serves":2,"ingredients":[],"instructions":"make"},{"id":42,"name":"veg pasta","dateCreated":"2022-05-19T00:00:00.000+0000","isVeg":true,"serves":4,"ingredients":[{"recipe":42,"id":44,"name":"tomato"},{"recipe":42,"id":45,"name":"garlic"},{"recipe":42,"id":43,"name":"pasta"}],"instructions":"boil pasta, cut tomato"},{"id":46,"name":"veg pasta","dateCreated":"2022-05-19T00:00:00.000+0000","isVeg":true,"serves":4,"ingredients":[{"recipe":46,"id":48,"name":"tomato"},{"recipe":46,"id":47,"name":"pasta"},{"recipe":46,"id":49,"name":"garlic"}],"instructions":"boil pasta, cut tomato"},{"id":50,"name":"veg pasta","dateCreated":"2022-05-19T00:00:00.000+0000","isVeg":true,"serves":4,"ingredients":[{"recipe":50,"id":51,"name":"pasta"},{"recipe":50,"id":52,"name":"garlic"},{"recipe":50,"id":53,"name":"tomato"}],"instructions":"boil pasta, cut tomato"}]</div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref passed">7</div>
+                            <div class="step-cell passed">* def output = response</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="8">
+                            <div class="step-ref passed">8</div>
+                            <div class="step-cell passed">And print 'response :',output</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="preformatted" data-parent="8">23:23:34.417 [print] response : [
+  {
+    "instructions": "marinate chicken and fry with onion",
+    "dateCreated": "2022-05-20T19:26:00.206+0000",
+    "isVeg": false,
+    "serves": 2,
+    "name": "Chicken Curry",
+    "ingredients": [
+      {
+        "recipe": 0,
+        "name": "onion",
+        "id": 4
+      },
+      {
+        "recipe": 0,
+        "name": "chicken",
+        "id": 0
+      },
+      {
+        "recipe": 0,
+        "name": "yogurt",
+        "id": 1
+      }
+    ],
+    "id": 0
+  },
+  {
+    "instructions": "marinate chicken and fry with ",
+    "dateCreated": "2022-05-20T19:30:31.743+0000",
+    "isVeg": false,
+    "serves": 2,
+    "name": "Chicken Curry",
+    "ingredients": [
+    ],
+    "id": 1
+  },
+  {
+    "instructions": "marinate chicken and fry with ",
+    "dateCreated": "2022-05-20T20:24:53.611+0000",
+    "isVeg": false,
+    "serves": 2,
+    "name": "Chicken Curry",
+    "ingredients": [
+    ],
+    "id": 2
+  },
+  {
+    "instructions": "marinate chicken and fry with ",
+    "dateCreated": "2022-05-20T20:26:04.955+0000",
+    "isVeg": false,
+    "serves": 2,
+    "name": "Chicken Curry",
+    "ingredients": [
+    ],
+    "id": 3
+  },
+  {
+    "instructions": "make",
+    "dateCreated": "2022-05-19T00:00:00.000+0000",
+    "isVeg": false,
+    "serves": 3,
+    "name": "chicke2n",
+    "ingredients": [
+    ],
+    "id": 17
+  },
+  {
+    "instructions": "boil pasta, cut tomato",
+    "dateCreated": "2022-05-19T00:00:00.000+0000",
+    "isVeg": false,
+    "serves": 3,
+    "name": "pasta",
+    "ingredients": [
+      {
+        "recipe": 37,
+        "name": "pasta",
+        "id": 40
+      },
+      {
+        "recipe": 37,
+        "name": "garlic",
+        "id": 41
+      },
+      {
+        "recipe": 37,
+        "name": "tomato",
+        "id": 38
+      },
+      {
+        "recipe": 37,
+        "name": "chicken",
+        "id": 39
+      }
+    ],
+    "id": 37
+  },
+  {
+    "instructions": "make",
+    "dateCreated": "2022-05-20T20:48:08.980+0000",
+    "isVeg": true,
+    "serves": 2,
+    "name": "DalBati",
+    "ingredients": [
+    ],
+    "id": 38
+  },
+  {
+    "instructions": "make",
+    "dateCreated": "2022-05-20T20:55:00.794+0000",
+    "isVeg": true,
+    "serves": 2,
+    "name": "DalBati",
+    "ingredients": [
+    ],
+    "id": 39
+  },
+  {
+    "instructions": "boil pasta, cut tomato",
+    "dateCreated": "2022-05-19T00:00:00.000+0000",
+    "isVeg": true,
+    "serves": 4,
+    "name": "veg pasta",
+    "ingredients": [
+      {
+        "recipe": 42,
+        "name": "tomato",
+        "id": 44
+      },
+      {
+        "recipe": 42,
+        "name": "garlic",
+        "id": 45
+      },
+      {
+        "recipe": 42,
+        "name": "pasta",
+        "id": 43
+      }
+    ],
+    "id": 42
+  },
+  {
+    "instructions": "boil pasta, cut tomato",
+    "dateCreated": "2022-05-19T00:00:00.000+0000",
+    "isVeg": true,
+    "serves": 4,
+    "name": "veg pasta",
+    "ingredients": [
+      {
+        "recipe": 46,
+        "name": "tomato",
+        "id": 48
+      },
+      {
+        "recipe": 46,
+        "name": "pasta",
+        "id": 47
+      },
+      {
+        "recipe": 46,
+        "name": "garlic",
+        "id": 49
+      }
+    ],
+    "id": 46
+  },
+  {
+    "instructions": "boil pasta, cut tomato",
+    "dateCreated": "2022-05-19T00:00:00.000+0000",
+    "isVeg": true,
+    "serves": 4,
+    "name": "veg pasta",
+    "ingredients": [
+      {
+        "recipe": 50,
+        "name": "pasta",
+        "id": 51
+      },
+      {
+        "recipe": 50,
+        "name": "garlic",
+        "id": 52
+      },
+      {
+        "recipe": 50,
+        "name": "tomato",
+        "id": 53
+      }
+    ],
+    "id": 50
+  }
+]</div>
+                    <div class="step-row">
+                        <div class="step-container" id="9">
+                            <div class="step-ref passed">9</div>
+                            <div class="step-cell passed">Then assert responseTime &lt; '100000'</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="10">
+                            <div class="step-ref passed">10</div>
+                            <div class="step-cell passed">Then match response[0].id =='#notnull'</div>
+                        </div>
+                        <div class="time-cell passed">2</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="11">
+                            <div class="step-ref passed">11</div>
+                            <div class="step-cell passed">Then match response[0].name == '#notnull'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="12">
+                            <div class="step-ref passed">12</div>
+                            <div class="step-cell passed">Then match response[0].dateCreated == '#present'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="13">
+                            <div class="step-ref passed">13</div>
+                            <div class="step-cell passed">Then match response[0].isVeg == '#present'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="14">
+                            <div class="step-ref passed">14</div>
+                            <div class="step-cell passed">Then match response[0].serves == '#present'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="15">
+                            <div class="step-ref passed">15</div>
+                            <div class="step-cell passed">Then match response[0].ingredients == '#present'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="16">
+                            <div class="step-ref passed">16</div>
+                            <div class="step-cell passed">Then match response[0].instructions == '#present'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>

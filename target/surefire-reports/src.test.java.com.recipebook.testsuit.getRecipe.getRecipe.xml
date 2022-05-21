@@ -1,0 +1,21 @@
+<testsuite failures="0" name="src/test/java/com/recipebook/testsuit/getRecipe/getRecipe.feature" skipped="0" tests="1" time="0.868163">
+  <testcase classname="src.test.java.com.recipebook.testsuit.getRecipe.getRecipe" name="Get the list of all the recipes and validate the response and response time." time="0.868163">
+    <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+Given path '/recipes/' .................................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def output = response ................................................... passed
+* def schema = ({ id: '#long', name: '#string', dateCreated: '#date', isVeg: '#boolean', serves:'#long', instructions: '#string' }) . passed
+And print 'response :',output ............................................. passed
+Then assert responseTime &lt; '100000' ....................................... passed
+Then match response[0].id =='#notnull' .................................... passed
+Then match response[0].name == '#notnull' ................................. passed
+Then match response[0].dateCreated == '#present' .......................... passed
+Then match response[0].isVeg == '#present' ................................ passed
+Then match response[0].serves == '#present' ............................... passed
+Then match response[0].ingredients == '#present' .......................... passed
+Then match response[0].instructions == '#present' ......................... passed</system-out>
+  </testcase>
+</testsuite>

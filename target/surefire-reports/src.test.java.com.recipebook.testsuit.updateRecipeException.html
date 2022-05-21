@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>src.test.java.com.recipebook.testsuit.updateRecipeException</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">1</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">0</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2022-05-21 12:10:31 AM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item passed">
+                        <a href="#[1.1:26]">[1.1:26] Add recipe's ingredients. </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/com/recipebook/testsuit/updateRecipeException.feature</span><span class="feature-description">As a user of the recipe-book app, I want to update recipe.</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1.1:26]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario Outline: [1.1:26]</span><span class="scenario-name">Add recipe's ingredients. </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 346</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[1.1:26]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[1.1:26]bg">
+                        <div class="step-container" id="1">
+                            <div class="step-ref bg-step">1</div>
+                            <div class="step-cell passed">* url urlParam = 'http://localhost:8080'</div>
+                        </div>
+                        <div class="time-cell passed">13</div>
+                    </div>
+                    <div class="preformatted" data-parent="1">00:10:30.223 not a js function or feature file: [type: NULL, value: null]</div>
+                    <div class="step-row" data-parent="[1.1:26]bg">
+                        <div class="step-container" id="2">
+                            <div class="step-ref bg-step">2</div>
+                            <div class="step-cell passed">And print 'urlParam :',urlParam</div>
+                        </div>
+                        <div class="time-cell passed">15</div>
+                    </div>
+                    <div class="preformatted" data-parent="2">00:10:30.272 [print] urlParam : http://localhost:8080</div>
+                    <div class="step-row" data-parent="[1.1:26]bg">
+                        <div class="step-container" id="3">
+                            <div class="step-ref bg-step">3</div>
+                            <div class="step-cell passed">* def dataFile = 'recipe-file.json'</div>
+                        </div>
+                        <div class="time-cell passed">10</div>
+                    </div>
+                    <div class="step-row" data-parent="[1.1:26]bg">
+                        <div class="step-container" id="4">
+                            <div class="step-ref bg-step">4</div>
+                            <div class="step-cell passed">* def payload =</div>
+                        </div>
+                        <div class="time-cell passed">59</div>
+                    </div>
+                    <div class="preformatted" data-parent="4">{
+"name": "veg pasta",
+"dateCreated": "2022-05-19",
+"isVeg" :  true,
+"serves":  4,
+"ingredients": [{
+            "name": "pasta",
+        }, {
+            "name":  "tomato"
+        }, {
+            "name":  "garlic"
+        }],
+"instructions" : "boil pasta, cut tomato"
+  }</div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-cell passed">Given path '/recipes/update/tr'</div>
+                        </div>
+                        <div class="time-cell passed">6</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
+                            <div class="step-cell passed">And request payload</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref passed">7</div>
+                            <div class="step-cell passed">When method put</div>
+                        </div>
+                        <div class="time-cell passed">327</div>
+                    </div>
+                    <div class="preformatted" data-parent="7">00:10:30.872 request:
+1 &gt; PUT http://localhost:8080/recipes/update/tr
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 180
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/11.0.10)
+{"name":"veg pasta","dateCreated":"2022-05-19","isVeg":true,"serves":4,"ingredients":[{"name":"pasta"},{"name":"tomato"},{"name":"garlic"}],"instructions":"boil pasta, cut tomato"}
+
+00:10:30.910 response time in milliseconds: 35,06
+1 &lt; 400
+1 &lt; Connection: close
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Fri, 20 May 2022 22:10:30 GMT
+1 &lt; Transfer-Encoding: chunked
+{"timestamp":"2022-05-20T22:10:30.901+0000","status":400,"error":"Bad Request","message":"Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \"tr\"","path":"/recipes/update/tr"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="8">
+                            <div class="step-ref passed">8</div>
+                            <div class="step-cell passed">Then status 400</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="9">
+                            <div class="step-ref passed">9</div>
+                            <div class="step-cell passed">* def output = response</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="10">
+                            <div class="step-ref passed">10</div>
+                            <div class="step-cell passed">And print 'response :',output</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="preformatted" data-parent="10">00:10:30.914 [print] response : {
+  "path": "/recipes/update/tr",
+  "error": "Bad Request",
+  "message": "Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \"tr\"",
+  "timestamp": "2022-05-20T22:10:30.901+0000",
+  "status": 400
+}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="11">
+                            <div class="step-ref passed">11</div>
+                            <div class="step-cell passed">Then assert responseTime &lt; '100000'</div>
+                        </div>
+                        <div class="time-cell passed">6</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="12">
+                            <div class="step-ref passed">12</div>
+                            <div class="step-cell passed">Then match response.error =='Bad Request'</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>

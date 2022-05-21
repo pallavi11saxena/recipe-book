@@ -1,0 +1,21 @@
+<testsuite failures="0" name="com/recipebook/testsuit/addRecipe/addRecipe.feature" skipped="0" tests="1" time="0.400024">
+  <testcase classname="com.recipebook.testsuit.addRecipe.addRecipe" name="Add recipe." time="0.400024">
+    <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
+And print 'urlParam :',urlParam ........................................... passed
+* def payload = ........................................................... passed
+Given path '/recipes/add' ................................................. passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* def output = response ................................................... passed
+And print 'response :',output ............................................. passed
+Then assert responseTime &lt; '100000' ....................................... passed
+Then match response.id =='#notnull' ....................................... passed
+Then match response.name == '#notnull' .................................... passed
+Then match response.dateCreated == '#present' ............................. passed
+Then match response.isVeg == '#present' ................................... passed
+Then match response.serves == '#present' .................................. passed
+Then match response.ingredients == '#present' ............................. passed
+Then match response.instructions == '#present' ............................ passed</system-out>
+  </testcase>
+</testsuite>
