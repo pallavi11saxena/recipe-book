@@ -14,6 +14,7 @@ Feature: As a user of the recipe-book app, I want get the list of all the recipe
   Scenario: Add a new recipe and validate that the old response size is less than the new response size after new recipe addition.
 
     Given path '/recipes/'
+    * header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }
     And header Accept = 'application/json'
     When method get
     Then status 200

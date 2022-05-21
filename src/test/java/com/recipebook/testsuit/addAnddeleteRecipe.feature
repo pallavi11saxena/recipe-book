@@ -12,6 +12,7 @@ Feature: As a user of the recipe-book app, I want to delete a recipe.
     * def value = add.response
 
     Given path '/recipes/delete/'+value.id+''
+    * header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }
     When method delete
     Then status 200
 

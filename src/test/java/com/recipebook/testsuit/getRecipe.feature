@@ -8,7 +8,7 @@ Feature: As a user of the recipe-book app, I want get the list of all the recipe
   Scenario: Get the list of all the recipes and validate the response and response time.
 
     Given path '/recipes/'
-    And header Accept = 'application/json'
+    * header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }
     When method get
     Then status 200
 

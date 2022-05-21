@@ -26,6 +26,7 @@ Feature: As a user of the recipe-book app, I want to get the exception if I put 
   Scenario Outline: Update Recipe negative scenario, get 400 Bad request error when wrong parameter is passed in Id field.
 
     Given path '/recipes/update/tr'
+    * header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }
     And request payload
     When method put
     Then status 400

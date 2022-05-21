@@ -1,5 +1,5 @@
-<testsuite failures="0" name="com/recipebook/testsuit/addAndUpdateRecipeName.feature" skipped="0" tests="1" time="0.03246">
-  <testcase classname="com.recipebook.testsuit.addAndUpdateRecipeName" name="Add a new recipe and then update newly added recipe's name." time="0.03246">
+<testsuite failures="0" name="com/recipebook/testsuit/addAndUpdateRecipeName.feature" skipped="0" tests="1" time="0.034262">
+  <testcase classname="com.recipebook.testsuit.addAndUpdateRecipeName" name="Add a new recipe and then update newly added recipe's name." time="0.034262">
     <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
 And print 'urlParam :',urlParam ........................................... passed
 * def dataFile = 'recipe-file.json' ....................................... passed
@@ -7,6 +7,7 @@ And print 'urlParam :',urlParam ........................................... pass
 * def value = add.response ................................................ passed
 * def payload = ........................................................... passed
 Given path '/recipes/update/'+value.id+'' ................................. passed
+* header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' } . passed
 And request payload ....................................................... passed
 When method put ........................................................... passed
 Then status 200 ........................................................... passed

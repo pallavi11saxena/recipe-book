@@ -1,9 +1,10 @@
-<testsuite failures="0" name="com/recipebook/testsuit/deleteRecipeException.feature" skipped="0" tests="1" time="0.023242">
-  <testcase classname="com.recipebook.testsuit.deleteRecipeException" name="Delete recipe negative scenario, get 500 internal server error when a non-existent Id is passed." time="0.023242">
+<testsuite failures="0" name="com/recipebook/testsuit/deleteRecipeException.feature" skipped="0" tests="1" time="0.05429">
+  <testcase classname="com.recipebook.testsuit.deleteRecipeException" name="Delete recipe negative scenario, get 500 internal server error when a non-existent Id is passed." time="0.05429">
     <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
 And print 'urlParam :',urlParam ........................................... passed
 * def dataFile = 'recipe-file.json' ....................................... passed
 Given path '/recipes/delete/10000000000' .................................. passed
+* header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' } . passed
 When method delete ........................................................ passed
 Then status 500 ........................................................... passed
 * def output = response ................................................... passed

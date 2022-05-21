@@ -26,6 +26,7 @@ Feature: As a user of the recipe-book app, I want to add a recipe.
   Scenario Outline: Add recipe and validate the response.
 
     Given path '/recipes/add'
+    * header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }
     And request payload
     When method post
     Then status 200

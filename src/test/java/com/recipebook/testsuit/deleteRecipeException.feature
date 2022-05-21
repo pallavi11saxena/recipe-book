@@ -9,6 +9,7 @@ Feature: As a user of the recipe-book app, I want to get the exception if I put 
   Scenario: Delete recipe negative scenario, get 500 internal server error when a non-existent Id is passed.
 
     Given path '/recipes/delete/10000000000'
+    * header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }
     When method delete
     Then status 500
 

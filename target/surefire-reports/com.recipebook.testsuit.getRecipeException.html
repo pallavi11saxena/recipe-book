@@ -46,7 +46,7 @@
                 <div id="nav-type">Scenarios</div>
                          
         
-                <div id="nav-date">2022-05-21 11:47:11 PM</div>
+                <div id="nav-date">2022-05-22 12:35:58 AM</div>
                         
       
                 <div class="nav-container">
@@ -67,7 +67,7 @@
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">Get Recipe negative scenario, get 404 Not found error when slash is missing from the endpoint. </span>
                         </div>
-                        <div class="scenario-time passed">ms: 18</div>
+                        <div class="scenario-time passed">ms: 27</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[1:8]bg">
@@ -83,7 +83,7 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="1">23:47:10.709 not a js function or feature file: [type: NULL, value: null]</div>
+                    <div class="preformatted" data-parent="1">00:35:57.694 not a js function or feature file: [type: NULL, value: null]</div>
                     <div class="step-row" data-parent="[1:8]bg">
                         <div class="step-container" id="2">
                             <div class="step-ref bg-step">2</div>
@@ -91,76 +91,91 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="2">23:47:10.709 [print] urlParam : http://localhost:8080</div>
+                    <div class="preformatted" data-parent="2">00:35:57.696 [print] urlParam : http://localhost:8080</div>
                     <div class="step-row">
                         <div class="step-container" id="3">
                             <div class="step-ref passed">3</div>
                             <div class="step-cell passed">Given path '/recipes'</div>
                         </div>
-                        <div class="time-cell passed">2</div>
+                        <div class="time-cell passed">4</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="4">
                             <div class="step-ref passed">4</div>
+                            <div class="step-cell passed">* header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
                             <div class="step-cell passed">And header Accept = 'application/json'</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
-                        <div class="step-container" id="5">
-                            <div class="step-ref passed">5</div>
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">13</div>
+                        <div class="time-cell passed">17</div>
                     </div>
-                    <div class="preformatted" data-parent="5">23:47:10.714 request:
+                    <div class="preformatted" data-parent="6">00:35:57.706 request:
 1 &gt; GET http://localhost:8080/recipes
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic dXNlcjpwYXNzd29yZA==
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: localhost:8080
 1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/11.0.10)
 
-23:47:10.725 response time in milliseconds: 9,89
+00:35:57.721 response time in milliseconds: 14,79
 1 &lt; 404
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Content-Type: application/json;charset=UTF-8
-1 &lt; Date: Sat, 21 May 2022 21:47:10 GMT
+1 &lt; Date: Sat, 21 May 2022 22:35:56 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: JSESSIONID=412BBA884D1A01EB2C970AC4BDA9FCE9; Path=/; HttpOnly
 1 &lt; Transfer-Encoding: chunked
-{"timestamp":"2022-05-21T21:47:10.722+0000","status":404,"error":"Not Found","message":"No message available","path":"/recipes"}</div>
-                    <div class="step-row">
-                        <div class="step-container" id="6">
-                            <div class="step-ref passed">6</div>
-                            <div class="step-cell passed">Then status 404</div>
-                        </div>
-                        <div class="time-cell passed">0</div>
-                    </div>
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-XSS-Protection: 1; mode=block
+{"timestamp":"2022-05-21T22:35:57.718+0000","status":404,"error":"Not Found","message":"No message available","path":"/recipes"}</div>
                     <div class="step-row">
                         <div class="step-container" id="7">
                             <div class="step-ref passed">7</div>
-                            <div class="step-cell passed">* def output = response</div>
+                            <div class="step-cell passed">Then status 404</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="8">
                             <div class="step-ref passed">8</div>
-                            <div class="step-cell passed">And print 'response :',output</div>
+                            <div class="step-cell passed">* def output = response</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="8">23:47:10.727 [print] response : {
-  "path": "/recipes",
-  "error": "Not Found",
-  "message": "No message available",
-  "timestamp": "2022-05-21T21:47:10.722+0000",
-  "status": 404
-}</div>
                     <div class="step-row">
                         <div class="step-container" id="9">
                             <div class="step-ref passed">9</div>
+                            <div class="step-cell passed">And print 'response :',output</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="9">00:35:57.722 [print] response : {
+  "path": "/recipes",
+  "error": "Not Found",
+  "message": "No message available",
+  "timestamp": "2022-05-21T22:35:57.718+0000",
+  "status": 404
+}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="10">
+                            <div class="step-ref passed">10</div>
                             <div class="step-cell passed">Then assert responseTime &lt; '100000'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                 </div>
             </div>

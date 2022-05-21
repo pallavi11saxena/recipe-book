@@ -17,6 +17,7 @@ Feature: As a user of the recipe-book app, I want to update recipe's name.
   Scenario Outline: Add a new recipe and then update newly added recipe's name.
 
     Given path '/recipes/update/'+value.id+''
+    * header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }
     And request payload
     When method put
     Then status 200

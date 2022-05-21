@@ -46,7 +46,7 @@
                 <div id="nav-type">Scenarios</div>
                          
         
-                <div id="nav-date">2022-05-21 11:47:11 PM</div>
+                <div id="nav-date">2022-05-22 12:35:58 AM</div>
                         
       
                 <div class="nav-container">
@@ -67,7 +67,7 @@
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario Outline: [1.1:26]</span><span class="scenario-name">Add recipe and validate the response. </span>
                         </div>
-                        <div class="scenario-time passed">ms: 20</div>
+                        <div class="scenario-time passed">ms: 40</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[1.1:26]bg">
@@ -81,9 +81,9 @@
                             <div class="step-ref bg-step">1</div>
                             <div class="step-cell passed">* url urlParam = 'http://localhost:8080'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="1">23:47:10.623 not a js function or feature file: [type: NULL, value: null]</div>
+                    <div class="preformatted" data-parent="1">00:35:57.578 not a js function or feature file: [type: NULL, value: null]</div>
                     <div class="step-row" data-parent="[1.1:26]bg">
                         <div class="step-container" id="2">
                             <div class="step-ref bg-step">2</div>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="2">23:47:10.624 [print] urlParam : http://localhost:8080</div>
+                    <div class="preformatted" data-parent="2">00:35:57.580 [print] urlParam : http://localhost:8080</div>
                     <div class="step-row" data-parent="[1.1:26]bg">
                         <div class="step-container" id="3">
                             <div class="step-ref bg-step">3</div>
@@ -125,25 +125,33 @@
                             <div class="step-ref passed">5</div>
                             <div class="step-cell passed">Given path '/recipes/add'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">2</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="6">
                             <div class="step-ref passed">6</div>
+                            <div class="step-cell passed">* header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref passed">7</div>
                             <div class="step-cell passed">And request payload</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
-                        <div class="step-container" id="7">
-                            <div class="step-ref passed">7</div>
+                        <div class="step-container" id="8">
+                            <div class="step-ref passed">8</div>
                             <div class="step-cell passed">When method post</div>
                         </div>
-                        <div class="time-cell passed">13</div>
+                        <div class="time-cell passed">29</div>
                     </div>
-                    <div class="preformatted" data-parent="7">23:47:10.632 request:
+                    <div class="preformatted" data-parent="8">00:35:57.594 request:
 1 &gt; POST http://localhost:8080/recipes/add
 1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic dXNlcjpwYXNzd29yZA==
 1 &gt; Connection: Keep-Alive
 1 &gt; Content-Length: 180
 1 &gt; Content-Type: application/json; charset=UTF-8
@@ -151,34 +159,41 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.6 (Java/11.0.10)
 {"name":"veg pasta","dateCreated":"2022-05-19","isVeg":true,"serves":4,"ingredients":[{"name":"pasta"},{"name":"tomato"},{"name":"garlic"}],"instructions":"boil pasta, cut tomato"}
 
-23:47:10.644 response time in milliseconds: 11,11
+00:35:57.621 response time in milliseconds: 26,66
 1 &lt; 200
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Content-Type: application/json;charset=UTF-8
-1 &lt; Date: Sat, 21 May 2022 21:47:10 GMT
+1 &lt; Date: Sat, 21 May 2022 22:35:56 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: JSESSIONID=1F445069399F9F972D5C79989212CB8A; Path=/; HttpOnly
 1 &lt; Transfer-Encoding: chunked
-{"id":346,"name":"veg pasta","dateCreated":"2022-05-19T00:00:00.000+0000","isVeg":true,"serves":4,"ingredients":[{"recipe":346,"id":347,"name":"tomato"},{"recipe":346,"id":348,"name":"garlic"},{"recipe":346,"id":349,"name":"pasta"}],"instructions":"boil pasta, cut tomato"}</div>
-                    <div class="step-row">
-                        <div class="step-container" id="8">
-                            <div class="step-ref passed">8</div>
-                            <div class="step-cell passed">Then status 200</div>
-                        </div>
-                        <div class="time-cell passed">0</div>
-                    </div>
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-XSS-Protection: 1; mode=block
+{"id":377,"name":"veg pasta","dateCreated":"2022-05-19T00:00:00.000+0000","isVeg":true,"serves":4,"ingredients":[{"recipe":377,"id":378,"name":"garlic"},{"recipe":377,"id":379,"name":"tomato"},{"recipe":377,"id":380,"name":"pasta"}],"instructions":"boil pasta, cut tomato"}</div>
                     <div class="step-row">
                         <div class="step-container" id="9">
                             <div class="step-ref passed">9</div>
-                            <div class="step-cell passed">* def output = response</div>
+                            <div class="step-cell passed">Then status 200</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="10">
                             <div class="step-ref passed">10</div>
+                            <div class="step-cell passed">* def output = response</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="11">
+                            <div class="step-ref passed">11</div>
                             <div class="step-cell passed">And print 'response :',output</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="10">23:47:10.645 [print] response : {
+                    <div class="preformatted" data-parent="11">00:35:57.622 [print] response : {
   "instructions": "boil pasta, cut tomato",
   "dateCreated": "2022-05-19T00:00:00.000+0000",
   "isVeg": true,
@@ -186,75 +201,75 @@
   "name": "veg pasta",
   "ingredients": [
     {
-      "recipe": 346,
-      "name": "tomato",
-      "id": 347
-    },
-    {
-      "recipe": 346,
+      "recipe": 377,
       "name": "garlic",
-      "id": 348
+      "id": 378
     },
     {
-      "recipe": 346,
+      "recipe": 377,
+      "name": "tomato",
+      "id": 379
+    },
+    {
+      "recipe": 377,
       "name": "pasta",
-      "id": 349
+      "id": 380
     }
   ],
-  "id": 346
+  "id": 377
 }</div>
-                    <div class="step-row">
-                        <div class="step-container" id="11">
-                            <div class="step-ref passed">11</div>
-                            <div class="step-cell passed">Then assert responseTime &lt; '100000'</div>
-                        </div>
-                        <div class="time-cell passed">0</div>
-                    </div>
                     <div class="step-row">
                         <div class="step-container" id="12">
                             <div class="step-ref passed">12</div>
-                            <div class="step-cell passed">Then match response.id =='#notnull'</div>
+                            <div class="step-cell passed">Then assert responseTime &lt; '100000'</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="13">
                             <div class="step-ref passed">13</div>
-                            <div class="step-cell passed">Then match response.name ==  '#(recipeName1)'</div>
+                            <div class="step-cell passed">Then match response.id =='#notnull'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="14">
                             <div class="step-ref passed">14</div>
-                            <div class="step-cell passed">Then match response.dateCreated == '#notnull'</div>
+                            <div class="step-cell passed">Then match response.name ==  '#(recipeName1)'</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="15">
                             <div class="step-ref passed">15</div>
-                            <div class="step-cell passed">Then match response.isVeg == '#(isVeg1)'</div>
+                            <div class="step-cell passed">Then match response.dateCreated == '#notnull'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="16">
                             <div class="step-ref passed">16</div>
-                            <div class="step-cell passed">Then match response.serves == '#(serves1)'</div>
+                            <div class="step-cell passed">Then match response.isVeg == '#(isVeg1)'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="17">
                             <div class="step-ref passed">17</div>
-                            <div class="step-cell passed">Then match response.ingredients == '#notnull'</div>
+                            <div class="step-cell passed">Then match response.serves == '#(serves1)'</div>
                         </div>
                         <div class="time-cell passed">1</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="18">
                             <div class="step-ref passed">18</div>
+                            <div class="step-cell passed">Then match response.ingredients == '#notnull'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="19">
+                            <div class="step-ref passed">19</div>
                             <div class="step-cell passed">Then match response.instructions == '#(instructions1)'</div>
                         </div>
                         <div class="time-cell passed">1</div>

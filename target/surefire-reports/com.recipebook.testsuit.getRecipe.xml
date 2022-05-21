@@ -1,9 +1,9 @@
-<testsuite failures="0" name="com/recipebook/testsuit/getRecipe.feature" skipped="0" tests="1" time="0.040481">
-  <testcase classname="com.recipebook.testsuit.getRecipe" name="Get the list of all the recipes and validate the response and response time." time="0.040481">
+<testsuite failures="0" name="com/recipebook/testsuit/getRecipe.feature" skipped="0" tests="1" time="0.08671">
+  <testcase classname="com.recipebook.testsuit.getRecipe" name="Get the list of all the recipes and validate the response and response time." time="0.08671">
     <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
 And print 'urlParam :',urlParam ........................................... passed
 Given path '/recipes/' .................................................... passed
-And header Accept = 'application/json' .................................... passed
+* header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' } . passed
 When method get ........................................................... passed
 Then status 200 ........................................................... passed
 * def output = response ................................................... passed

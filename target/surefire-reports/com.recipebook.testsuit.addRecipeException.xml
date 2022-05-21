@@ -1,10 +1,11 @@
-<testsuite failures="0" name="com/recipebook/testsuit/addRecipeException.feature" skipped="0" tests="1" time="0.017967">
-  <testcase classname="com.recipebook.testsuit.addRecipeException" name="Add recipe negative scenario, get 500 internal server error when name is not passed in the request payload." time="0.017967">
+<testsuite failures="0" name="com/recipebook/testsuit/addRecipeException.feature" skipped="0" tests="1" time="0.030837">
+  <testcase classname="com.recipebook.testsuit.addRecipeException" name="Add recipe negative scenario, get 500 internal server error when name is not passed in the request payload." time="0.030837">
     <system-out>* url urlParam = 'http://localhost:8080' .................................. passed
 And print 'urlParam :',urlParam ........................................... passed
 * def dataFile = 'recipe-file.json' ....................................... passed
 * def payload = ........................................................... passed
 Given path '/recipes/add' ................................................. passed
+* header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' } . passed
 And request payload ....................................................... passed
 When method post .......................................................... passed
 Then status 500 ........................................................... passed

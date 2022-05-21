@@ -25,6 +25,7 @@ Feature: As a user of the recipe-book app, I want to get the exception if I put 
   Scenario Outline: Add recipe negative scenario, get 500 internal server error when name is not passed in the request payload.
 
     Given path '/recipes/add'
+    * header Authorization = call read('basic-auth.js') { username: 'user', password: 'password' }
     And request payload
     When method post
     Then status 500
