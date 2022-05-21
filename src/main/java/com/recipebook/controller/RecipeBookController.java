@@ -12,6 +12,7 @@ import java.util.NoSuchElementException;
 
 /**
  * @author pallavi
+ * Controller for Get, POST, PUT and DELETE operations.
  */
 
 @RestController
@@ -26,11 +27,20 @@ public class RecipeBookController {
         this.ingredientsDAO = ingredientsDAO;
     }
 
+    /**
+     * GET operation to get the list of all recipes.
+     * @return recipes, list of all recipes returned
+     */
     @GetMapping(path = "/", produces = "application/json")
     public List<Recipe> getRecipes() {
         return recipeDao.findAll();
     }
 
+    /**
+     * POST operation to add a new recipe.
+     * @param recipe, recipe object to be added
+     * @return recipe, added recipe object
+     */
     @PostMapping("/add")
     public Recipe createRecipe(@Valid @RequestBody Recipe recipe) {
         Recipe recipeObj = recipeDao.save(recipe);
@@ -41,6 +51,12 @@ public class RecipeBookController {
         return recipeObj;
     }
 
+    /**
+     * PUT operation to update an existing recipe.
+     * @param recipe, recipe object with updated details
+     * @param id, id of the recipe to be updated
+     * @return recipe, updated recipe object
+     */
     @PutMapping("/update/{id}")
     public Recipe updateRecipe(@Valid @RequestBody Recipe recipe, @PathVariable Long id) throws NoSuchElementException {
         try {
@@ -67,10 +83,13 @@ public class RecipeBookController {
         }
     }
 
+    /**
+     * DELETE operation to delete a recipe.
+     * @param  id, recipe id to be deleted
+     */
     @DeleteMapping("/delete/{id}")
     public void deleteRecipe(@PathVariable Long id) {
         recipeDao.deleteById(id);
     }
-
 
 }

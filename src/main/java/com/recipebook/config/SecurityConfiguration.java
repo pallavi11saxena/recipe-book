@@ -6,9 +6,18 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+/**
+ * @author pallavi
+ * Security configuration for API
+ */
+
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+    /**
+     * Configuring basic authentication for HTTP
+     * @param auth
+     */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
@@ -16,6 +25,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     }
 
+    /**
+     * Configuring security using basic authentication
+     * @param http
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 

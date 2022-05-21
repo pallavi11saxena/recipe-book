@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * @author pallavi
+ * Repository to connect to RECIPE table.
  */
 
 @Repository
