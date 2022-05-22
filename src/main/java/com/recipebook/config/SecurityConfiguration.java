@@ -20,7 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
+        //Noop encoder should be replaced with a PasswordEncoder in production.
         auth.inMemoryAuthentication().withUser("user").password("{noop}password").roles("USER");
 
     }
